@@ -21,12 +21,53 @@ int main() {
 }
 
 void my_money_run() {
-  MyMoney myMoney;
-  myMoney.name = "Peter";
-  myMoney.money = 1000;
-  myMoney.rate = 8;
-  myMoney.time = 5;
-  myMoney.showAll();
+  // MyMoney myMoney;
+  // myMoney.name = "Peter";
+  // myMoney.money = 1000;
+  // myMoney.rate = 8;
+  // myMoney.time = 5;
+  // myMoney.showAll();
+
+  MyMoney ob1, ob2;
+  ob1.setAll("Martin", 1000, 8, 5);
+  ob2.setAll("Mell", 1200, 7, 4);
+
+  ob1.showAll();
+  cout << endl;
+  ob2.showAll();
+  cout << endl;
+  cout << "------" << endl;
+
+  // name
+  ob1.setAll("Martin 2");
+  ob1.showAll();
+  cout << endl;
+
+  // time
+  ob1.setAll(10);
+  ob1.showAll();
+  cout << endl;
+
+  // begin money
+  ob1.setAll(1200.0);
+  ob1.showAll();
+  cout << endl;
+
+  // begin money 2
+  ob1.setAll(1500.0, true);
+  ob1.showAll();
+  cout << endl;
+
+  // rate
+  ob1.setAll(6, false);
+  ob1.showAll();
+  cout << endl;
+
+  // money, rate, time
+  ob1.setAll(1000, 8, 5);
+  ob1.showAll();
+  cout << endl;
+
 }
 
 void some_print() {

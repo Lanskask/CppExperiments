@@ -4,15 +4,40 @@
 #include <cstdio>
 //#include "main2.h"
 #include "Distance.cpp"
+#include "MyMoney.cpp"
 
 void swap(int *x, int *y);
 void fun_with_swap();
 void fun_with_Distance();
+void some_print();
+void my_money_run();
 
 int main() {
 //    fun_with_swap();
-    fun_with_Distance();
-    return 0;
+  // fun_with_Distance();
+  // some_print();
+  my_money_run();
+  return 0;
+}
+
+void my_money_run() {
+  MyMoney myMoney;
+  myMoney.name = "Peter";
+  myMoney.money = 1000;
+  myMoney.rate = 8;
+  myMoney.time = 5;
+  myMoney.showAll();
+}
+
+void some_print() {
+  int a;
+  int *p_a = &a;
+
+  a = 5;
+
+  cout << "p_a: " << p_a << "\n";
+  cout << "*p_a: " << *p_a << "\n";
+  cout << "&p_a: " << &p_a << "\n";
 }
 
 void fun_with_Distance() {
@@ -23,6 +48,7 @@ void fun_with_Distance() {
     cout << "\ndist1: "; dist1.show_dist();
     cout << "\ndist2: "; dist2.show_dist();
     cout << "\ndist3: "; dist3.show_dist();
+    cout << "\n";
 }
 
 void fun_with_swap() {

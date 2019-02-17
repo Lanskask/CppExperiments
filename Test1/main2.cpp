@@ -6,18 +6,54 @@
 #include "Distance.cpp"
 #include "MyMoney.cpp"
 
+// Declarations
 void swap(int *x, int *y);
 void fun_with_swap();
 void fun_with_Distance();
 void some_print();
 void my_money_run();
+// void postman();
+void print_enum();
+
+enum week { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
+
+// local obj creating
+void postman() {
+  MyMoney objD("Postman Coven", 200, 3,2);
+}
 
 int main() {
 //    fun_with_swap();
   // fun_with_Distance();
   // some_print();
-  my_money_run();
+  // my_money_run();
+
+  MyMoney objA;
+  MyMoney objB("Uncle Fedor", 1200, 6, 9);
+  postman();
+
+  // Creating of dynamic obj
+  MyMoney* objC = new MyMoney("Ball Dog", 1200, 6, 9);
+
+  cout << "All objcts created" << endl;
+
+  // Deleting of dynamic obj
+  delete objC;
+
+  cout << "End of the program" << endl;
+
+  // print_enum();
+
   return 0;
+}
+
+void print_enum() {
+  week today;
+  today = Wednesday;
+
+  cout << "||||||||||||||||||" << endl;
+  cout << "Day " << today + 1 << endl;
+  cout << "||||||||||||||||||" << endl;
 }
 
 void my_money_run() {
@@ -28,14 +64,14 @@ void my_money_run() {
   // myMoney.time = 5;
   // myMoney.showAll();
 
-  MyMoney ob1, ob2;
-  ob1.setAll("Martin", 1000, 8, 5);
-  ob2.setAll("Mell", 1200, 7, 4);
+  // MyMoney ob1, ob2;
+  // ob1.setAll("Martin", 1000, 8, 5);
+  // ob2.setAll("Mell", 1200, 7, 4);
 
-  ob1.showAll();
-  cout << endl;
-  ob2.showAll();
-  cout << endl;
+  // ob1.showAll();
+  // cout << endl;
+  // ob2.showAll();
+/*  cout << endl;
   cout << "------" << endl;
 
   // name
@@ -67,8 +103,11 @@ void my_money_run() {
   ob1.setAll(1000, 8, 5);
   ob1.showAll();
   cout << endl;
+*/
+
 
 }
+
 
 void some_print() {
   int a;

@@ -3,7 +3,8 @@
 using namespace std;
 
 int main() {
-    cout <<  "Some data" << endl;
+	cout << "Hell W" << endl;
 
-    return 0;
+	return 0;
 }
+

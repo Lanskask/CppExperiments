@@ -5,7 +5,7 @@ void sizes(char ch);
 
 int main() {
     int x = 17;
-    int* x_ref = &x;
+    int *x_ref = &x;
     std::cout << "x_ref: " << x_ref << "; *x_ref: " << *x_ref << std::endl;
 
     int *y_ref = x_ref;

@@ -11,7 +11,6 @@ public:
             return n;
         }
 
-//        return get(n - 2) + get(n - 1);
         static unordered_map<int, int> cache;
         auto &result = cache[n];
         if (result == 0) {
